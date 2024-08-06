@@ -15,9 +15,9 @@ class Stack{
 	}
     
     static int pop(){
-        int result = stack.get(top);
-        stack.remove(top--);
-   		return result;
+	    int result = stack.get(top);
+	    stack.remove(top--);
+	    return result;
     }
     
     static int peek(){
