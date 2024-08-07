@@ -3,22 +3,22 @@ package Stack구현_제네릭;
 import java.util.ArrayList;
 import java.util.List;
 
-class Stack<T>{
-    List<T> stack = new ArrayList<T>();
+class Stack<E>{
+    List<E> stack = new ArrayList<E>();
     int top =-1;
     
-    void push(T i){
+    void push(E i){
         stack.add(i);
         top++;
 	}
     
-    T pop(){
-        T result = stack.get(top);
+    E pop(){
+        E result = stack.get(top);
         stack.remove(top--);
    		return result;
     }
     
-    T peek(){
+    E peek(){
         return stack.get(top);
     }
     

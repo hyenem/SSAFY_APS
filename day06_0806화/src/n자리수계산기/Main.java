@@ -49,6 +49,7 @@ public class Main {
 	
 	static int evaluate(String str) {
 		String newStr = postfix(str);
+		System.out.println(newStr);
 		Stack<Integer> stack = new Stack<>();
 		int i = 0;
 		while(i!=newStr.length()) {
