@@ -23,11 +23,16 @@ public class Solution {
 				int tmpint = 0;
 				if(str.length()==0) continue;
 				for(int j = 1; j<str.length(); j++) {
-					if(str.charAt(j)==' ' || j==str.length()-1) {
+					if(str.charAt(j)==' ') {
 						child[count][nowidx]=tmpint;
 						count++;
+						tmpint=0;
 					} else {
 						tmpint = tmpint*10 + str.charAt(j)-'0';
+						if(j==str.length()-1) {
+							child[count][nowidx]=tmpint;
+							count++;
+						}
 					}
 				}
 			}
